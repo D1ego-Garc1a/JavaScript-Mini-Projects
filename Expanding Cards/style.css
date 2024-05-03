@@ -20,13 +20,50 @@ body {
   width: 90vw;
 }
 
-img {
+.panel {
   background-size: auto 100%;
   background-position: center;
   background-repeat: no-repeat;
+  /* border-radius: 50px; */
+  cursor: pointer;
+  margin: 10px;
+  flex: 0.5;
+  position: relative;
+  transition: flex 0.7s ease-in;
+  /* width: 100%; */
+}
+
+.panel img {
   height: 80vh;
   border-radius: 50px;
-  cursor: pointer;
-  flex: 0.5;
-  margin: 10px;
+  width: 100%;
+}
+
+.panel h3 {
+  color: #fff;
+  font-size: 24px;
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
+  margin: 0;
+  opacity: 0;
+}
+
+.panel.active img {
+  flex: 5;
+}
+
+.panel.active h3 {
+  opacity: 1;
+}
+
+@media (max-width: 680px) {
+  .container {
+    width: 100vw;
+  }
+
+  .panel:nth-of-type(4),
+  .panel:nth-of-type(5) {
+    display: none;
+  }
 }
