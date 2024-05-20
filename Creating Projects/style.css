@@ -28,6 +28,7 @@ body {
   width: 350px;
 }
 .progress-container::before {
+  content: "";
   background-color: #e0e0e0;
   position: absolute;
   top: 50%;
